@@ -2,7 +2,7 @@
   "name": "pixelpenny",
   "version": "1.0.0",
   "description": "MERN App that a content creator can use to receive tips from viewers. Transactions supported by stripe.",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js --ignore client",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
@@ -16,5 +16,8 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }
