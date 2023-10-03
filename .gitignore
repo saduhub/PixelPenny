@@ -14,6 +14,7 @@ npm-debug.log*
 *.seed
 *.log
 *.data
+test
 
 # dotenv environment variables files
 .env
