@@ -1,0 +1,38 @@
+# dependencies
+/node_modules
+
+# production build outputs
+/build
+
+# logs
+npm-debug.log*
+*.log
+
+# runtime data
+.pids
+*.pid
+*.seed
+*.log
+*.data
+
+# dotenv environment variables files
+.env
+
+# misc
+.DS_Store
+*.pem
+*.map
+*.swp
+*.swo
+*.swn
+*.bak
+*.swbak
+*.swp
+*.swo
+
+# editors and IDEs
+.vscode/
+
+#Timing
+README.md 
+html-css
