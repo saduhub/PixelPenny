@@ -1,0 +1,43 @@
+.formSection {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+form {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.inputGroup {
+    display: flex;           
+    align-items: center;   
+    justify-content: space-between;
+    margin: 0.25rem;
+}
+
+.inputGroup input {
+    max-width: 8rem;        
+}
+
+.inputGroup label {
+    min-width: 8rem;  
+    text-align: left;      
+}
+
+button {
+    background-color: #FFA500; 
+    border: none; 
+    color: black;
+    padding: 0.75rem 1.5rem; 
+    text-align: center;
+    display: block;
+    font-size: 1rem; 
+    margin: 1rem auto;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+button:hover {
+    background-color: #bd6a05; 
+}
