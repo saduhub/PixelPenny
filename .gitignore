@@ -1,8 +1,9 @@
 # dependencies
-/node_modules
+node_modules
+package-lock.json
 
 # production build outputs
-/build
+build
 
 # logs
 npm-debug.log*
