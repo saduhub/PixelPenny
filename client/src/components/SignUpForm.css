@@ -1,5 +1,5 @@
 .formSection {
-    max-width: 280px;
+    /* max-width: 280px; */
     margin: 0 auto;
 }
 
@@ -8,36 +8,61 @@ form {
     margin: 0.5rem;
 }
 
-.inputGroup {
-    display: flex;           
-    align-items: center;   
-    justify-content: space-between;
-    margin: 0.25rem;
+input {
+    display: block;  
+    margin: 1rem auto 0; 
+    width: 90vw;  
+    background-color: transparent; 
+    border: 1px solid white;      
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    color: white;
 }
 
-.inputGroup input {
-    max-width: 8rem;        
+input::placeholder {
+    color: gray; 
+    opacity: 1; 
 }
 
-.inputGroup label {
-    min-width: 8rem;  
-    text-align: left;      
+h6 {
+    width: 90vw;
+    text-align: end;
+    display: inline-block;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: white; 
+}
+
+a:visited {
+    color: white; 
+}
+
+.buttonDiv h6 {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 button {
-    background-color: #FFA500; 
+    background-color: #B87333; 
     border: none; 
-    color: black;
-    padding: 0.75rem 1.5rem; 
+    color: white;
+    padding: 0.5rem; 
     text-align: center;
     display: block;
     font-size: 1rem; 
-    margin: 1rem auto;
+    margin: 0 auto;
     cursor: pointer;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
     transition: background-color 0.3s, transform 0.3s; 
+    width: 90vw;
 }
 
 button:hover {
-    background-color: #bd6a05; 
+    background-color: #D29C6F; 
 }
