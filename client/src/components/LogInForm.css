@@ -1,5 +1,4 @@
 .formSection {
-    /* max-width: 280px; */
     margin: 0 auto;
 }
 
@@ -25,6 +24,14 @@ input::placeholder {
     opacity: 1; 
 }
 
+h6 {
+    width: 90vw;
+    text-align: end;
+    display: inline-block;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
 a {
     text-decoration: none;
     color: white; 
@@ -34,16 +41,10 @@ a:visited {
     color: white; 
 }
 
-.buttonDiv {
-    margin-top: 2rem;
-}
-
 .buttonDiv h6 {
-    width: 90vw;
     text-align: center;
     display: inline-block;
     margin-bottom: 0;
-    font-weight: 400;
 }
 
 button {
