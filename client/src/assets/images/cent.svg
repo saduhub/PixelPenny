@@ -1,0 +1,10 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Inner Circle -->
+  <circle cx="100" cy="100" r="90" fill="#D29C6F" />
+  
+  <!-- Thin Outer Circle -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#B87333" stroke-width="4" />
+  
+  <!-- Cent symbol "¢" -->
+  <text x="100" y="130" font-family="Arial" font-size="100" fill="white" text-anchor="middle">¢</text>
+</svg>
