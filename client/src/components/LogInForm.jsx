@@ -4,7 +4,7 @@ const LoginForm = ({ switchToSignUp, switchToForgot }) => {
     return (
         <section className='formSection'>
             <form>   
-                <input type="email" id="loginEmail" name="email" placeholder="Email" required />
+                <input type="username" id="username" name="username" placeholder="Username" required />
                 <input type="password" id="loginPassword" name="password" placeholder="Password" required />
                 {/*  eslint-disable-next-line */}
                 <h6><a href="#" onClick={switchToForgot}>Forgot Password?</a></h6>
