@@ -31,7 +31,7 @@ const resolvers = {
                 throw new ApolloError(`Error creating user: ${error.message}.`);
             }
         },
-        login: async (_, { userName, password }) => {
+        logIn: async (_, { userName, password }) => {
             try {
                 const foundUser = await User.findOne({ userName });
 

@@ -12,3 +12,15 @@ export const SIGN_UP = gql`
     }
   }
 `;
+
+export const LOG_IN = gql`
+  mutation logIn($userName: String!, $password: String!) {
+    logIn(userName: $userName, password: $password) {
+      foundUser {
+        _id
+        userName
+      }
+      token
+    }
+  }
+`;
