@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './global.css';
-import SignUpPage from './pages/SignUpPage';
+import App from './app';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <SignUpPage />
+    <App />
   </React.StrictMode>
 );
