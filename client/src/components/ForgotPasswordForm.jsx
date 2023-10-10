@@ -1,4 +1,4 @@
-import './ForgotPasswordForm.css';
+import styles from './ForgotPasswordForm.module.css';
 import React, { useState } from "react";
 import { useMutation, useQuery } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
@@ -44,7 +44,7 @@ const ForgotPasswordForm = ({ switchToLogin }) => {
     };
 
     return (
-        <section className='formSection'>
+        <section className={styles.formSection}>
             <form onSubmit={handleFormSubmit}>
                 <input type="email" id="forgotEmail" name="email" placeholder="Email" onChange={handleInputChange} required />
                 {/*  eslint-disable-next-line */}

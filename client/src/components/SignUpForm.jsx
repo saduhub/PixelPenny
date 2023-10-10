@@ -1,4 +1,4 @@
-import './SignUpForm.css';
+import styles from './SignUpForm.module.css';
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
@@ -35,13 +35,13 @@ const SignUpForm = ({ switchToLogin }) => {
     };
 
     return (
-        <section className='formSection'>
+        <section className={styles.formSection}>
             <form onSubmit={handleFormSubmit}>   
                 <input type="text" id="username" name="userName" placeholder="Username" required onChange={handleInputChange} />
                 <input type="email" id="email" name="email" placeholder="Email" required onChange={handleInputChange} />
                 <input type="password" id="password" name="password" placeholder="Password" required onChange={handleInputChange} />
                 <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required onChange={handleInputChange} />
-                <div className='buttonDiv'>
+                <div className={styles.buttonDiv}>
                     <button type="submit">Sign Up</button>
                     <h6>or</h6>
                     <button type="button" onClick={switchToLogin}>Log In</button>
