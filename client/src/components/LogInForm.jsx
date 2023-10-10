@@ -33,7 +33,6 @@ const LoginForm = ({ switchToSignUp, switchToForgot }) => {
         }
     };
 
-
     return (
         <section className='formSection'>
             <form onSubmit={handleFormSubmit}>   

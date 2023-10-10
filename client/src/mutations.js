@@ -24,3 +24,9 @@ export const LOG_IN = gql`
     }
   }
 `;
+
+export const SEND_RESET_PASSWORD_EMAIL = gql`
+  mutation sendResetPasswordEmail($email: String!) {
+    sendResetPasswordEmail(email: $email)
+  }
+`;

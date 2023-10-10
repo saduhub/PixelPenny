@@ -10,11 +10,13 @@ const typeDefs = gql`
   type Query {
     getUserById(_id: ID!): User
     me: User
+    resetPasswordRequest(email: String!): User
   }
 
   type Mutation {
     signUp(userName: String!, email: String!, password: String!): AuthSignUp
     logIn(userName: String!, password: String!): AuthLogin
+    sendResetPasswordEmail(email: String!): Boolean!
     resetPassword(password: String!): AuthReset
   }
 

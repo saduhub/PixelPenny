@@ -1,6 +1,6 @@
 const { AuthenticationError, ApolloError } = require('apollo-server-express');
 const { User } = require('../models');
-const { signToken } = require('../utils/auth');
+const { signToken, signNewPasswordToken, sendEmail } = require('../utils/auth');
 
 const resolvers = {
     Query: {
@@ -19,7 +19,14 @@ const resolvers = {
             } catch (error) {
                 throw new ApolloError(`Error fetching user: ${error.message}.`);
             }
-        }
+        },
+        resetPasswordRequest: async (_, { email }) => {
+            try {
+                return await User.findOne({ email });
+            } catch (error) {
+                throw new ApolloError(`Error fetching user by email: ${error.message}.`);
+            }
+        },
     },
     Mutation: {
         signUp: async (_, { userName, email, password }) => {
@@ -47,6 +54,29 @@ const resolvers = {
         
                 const token = signToken(foundUser);
                 return { token, foundUser };
+                
+            } catch (error) {
+                throw new ApolloError(`Error during login: ${error.message}.`);
+            }
+        },
+        sendResetPasswordEmail: async (_, { email }) => {
+            try {
+                const foundUser = await User.findOne({ email });
+
+                if (!foundUser) {
+                    throw new AuthenticationError('User not found.');
+                }
+
+                const resetPasswordToken = signNewPasswordToken(foundUser);
+                const resetLink = `http://localhost:3000//reset-password?token=${resetPasswordToken}`;
+                await sendEmail(email, resetLink);
+
+                if (resetPasswordToken) {
+                    return true;
+                } else {
+                    throw new Error("Token not generated.")
+                }
+                
                 
             } catch (error) {
                 throw new ApolloError(`Error during login: ${error.message}.`);
