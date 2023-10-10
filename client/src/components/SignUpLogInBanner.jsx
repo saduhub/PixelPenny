@@ -1,13 +1,13 @@
-import './SignUpLogInBanner.css';
+import styles from './SignUpLogInBanner.module.css';
 import bitcoin from '../assets/images/cent.svg'
 
 const SignUpLogInBanner = () => {
     return (
-        <section className='banner'>
-            <div className='bannerImage'>
+        <section className={styles.banner}>
+            <div className={styles.bannerImage}>
                 <img src={bitcoin} alt="Coin Graphic" />
             </div>
-            <div className='bannerText'>
+            <div className={styles.bannerText}>
                 <h1>PixelPenny</h1>
                 <p>Every PixelPenny Counts!</p>
             </div>

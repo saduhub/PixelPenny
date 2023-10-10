@@ -1,4 +1,4 @@
-import './LogInForm.css';
+import styles from './LogInForm.module.css';
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
@@ -34,13 +34,13 @@ const LoginForm = ({ switchToSignUp, switchToForgot }) => {
     };
 
     return (
-        <section className='formSection'>
+        <section className={styles.formSection}>
             <form onSubmit={handleFormSubmit}>   
                 <input type="username" id="username" name="userName" placeholder="Username" onChange={handleInputChange} required />
                 <input type="password" id="loginPassword" name="password" placeholder="Password" onChange={handleInputChange} required />
                 {/*  eslint-disable-next-line */}
                 <h6><a href="#" onClick={switchToForgot}>Forgot Password?</a></h6>
-                <div className='buttonDiv'>
+                <div className={styles.buttonDiv}>
                     <button type="submit">Log In</button>
                     <h6>or</h6>
                     <button type="button" onClick={switchToSignUp}>Sign Up</button>
