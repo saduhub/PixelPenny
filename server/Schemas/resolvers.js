@@ -85,9 +85,14 @@ const resolvers = {
         resetPassword: async (_, { newPassword }, context) => {
             try {
                 if (context.user) {
-                    const updatedUser = await User.findByIdAndUpdate({ _id: context.user._id }, { password: newPassword });
+                    const updatedUser = await User.findById(context.user._id);
+                    if (!updatedUser) {
+                        throw new AuthenticationError('User not found.');
+                    }
+                    updatedUser.password = newPassword;
+                    await updatedUser.save()
                     const token = signToken(updatedUser);
-                    return { token, newUser };
+                    return { token, updatedUser };
                 }
             } catch (error) {
                 throw new ApolloError(`Error creating user: ${error.message}.`);
