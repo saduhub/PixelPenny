@@ -17,7 +17,7 @@ const typeDefs = gql`
     signUp(userName: String!, email: String!, password: String!): AuthSignUp
     logIn(userName: String!, password: String!): AuthLogin
     sendResetPasswordEmail(email: String!): Boolean!
-    resetPassword(password: String!): AuthReset
+    resetPassword(newPassword: String!): AuthReset
   }
 
   type AuthSignUp {
