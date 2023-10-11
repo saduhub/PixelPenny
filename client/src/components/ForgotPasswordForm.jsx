@@ -37,7 +37,7 @@ const ForgotPasswordForm = ({ switchToLogin }) => {
                 }
             });
 
-            navigate("/resetPasswordRequested");
+            navigate("/resetPassword");
         } catch (e) {
             console.error(e);
         }
