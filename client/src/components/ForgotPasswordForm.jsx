@@ -44,14 +44,31 @@ const ForgotPasswordForm = ({ switchToLogin }) => {
     };
 
     return (
-        <section className={styles.formSection}>
-            <form onSubmit={handleFormSubmit}>
-                <input type="email" id="forgotEmail" name="email" placeholder="Email" onChange={handleInputChange} required />
+    <section className={styles.forgotPasswordForm__section}>
+        <form onSubmit={handleFormSubmit} className={styles.forgotPasswordForm__form}>
+            <input 
+                type="email" 
+                id="forgotEmail" 
+                name="email" 
+                placeholder="Email" 
+                onChange={handleInputChange} 
+                required 
+                className={styles.forgotPasswordForm__inputEmail}
+            />
+            <h6 className={styles.forgotPasswordForm__backToLogin}>
                 {/*  eslint-disable-next-line */}
-                <h6><a href="#" onClick={switchToLogin}>Back to login</a></h6>
-                <button type="submit">Reset Password</button>
-            </form>
-        </section>
+                <a href="#" onClick={switchToLogin} className={styles.forgotPasswordForm__backLinkAnchor}>
+                    Back to login
+                </a>
+            </h6>
+            <button 
+                type="submit" 
+                className={styles.forgotPasswordForm__resetPasswordBtn}
+            >
+                Reset Password
+            </button>
+        </form>
+    </section>
     );
 };
 

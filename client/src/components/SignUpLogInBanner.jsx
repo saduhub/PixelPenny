@@ -3,13 +3,13 @@ import bitcoin from '../assets/images/cent.svg'
 
 const SignUpLogInBanner = () => {
     return (
-        <section className={styles.banner}>
-            <div className={styles.bannerImage}>
-                <img src={bitcoin} alt="Coin Graphic" />
+        <section className={styles.signUpLogInBanner__section}>
+            <div className={styles.signUpLogInBanner__imageContainer}>
+                <img src={bitcoin} alt="Coin Graphic" className={styles.signUpLogInBanner__coinImage} />
             </div>
-            <div className={styles.bannerText}>
-                <h1>PixelPenny</h1>
-                <p>Every PixelPenny Counts!</p>
+            <div className={styles.signUpLogInBanner__textContainer}>
+                <h1 className={styles.signUpLogInBanner__title}>PixelPenny</h1>
+                <p className={styles.signUpLogInBanner__subtitle}>Every PixelPenny Counts!</p>
             </div>
         </section>
     );

@@ -34,16 +34,47 @@ const LoginForm = ({ switchToSignUp, switchToForgot }) => {
     };
 
     return (
-        <section className={styles.formSection}>
-            <form onSubmit={handleFormSubmit}>   
-                <input type="username" id="username" name="userName" placeholder="Username" onChange={handleInputChange} required />
-                <input type="password" id="loginPassword" name="password" placeholder="Password" onChange={handleInputChange} required />
-                {/*  eslint-disable-next-line */}
-                <h6><a href="#" onClick={switchToForgot}>Forgot Password?</a></h6>
-                <div className={styles.buttonDiv}>
-                    <button type="submit">Log In</button>
-                    <h6>or</h6>
-                    <button type="button" onClick={switchToSignUp}>Sign Up</button>
+        <section className={styles.loginForm__section}>
+            <form onSubmit={handleFormSubmit} className={styles.loginForm__form}>   
+                <input 
+                    type="username" 
+                    id="username" 
+                    name="userName" 
+                    placeholder="Username" 
+                    onChange={handleInputChange} 
+                    required 
+                    className={styles.loginForm__inputUsername}
+                />
+                <input 
+                    type="password" 
+                    id="loginPassword" 
+                    name="password" 
+                    placeholder="Password" 
+                    onChange={handleInputChange} 
+                    required 
+                    className={styles.loginForm__inputPassword}
+                />
+                <h6 className={styles.loginForm__forgotPassword}>
+                    {/*  eslint-disable-next-line */}
+                    <a href="#" onClick={switchToForgot} className={styles.loginForm__forgotPasswordAnchor}>
+                        Forgot Password?
+                    </a>
+                </h6>
+                <div className={styles.loginForm__buttonDiv}>
+                    <button 
+                        type="submit" 
+                        className={styles.loginForm__loginButton}
+                    >
+                        Log In
+                    </button>
+                    <h6 className={styles.loginForm__orText}>or</h6>
+                    <button 
+                        type="button" 
+                        onClick={switchToSignUp} 
+                        className={styles.loginForm__signupButton}
+                    >
+                        Sign Up
+                    </button>
                 </div>
             </form>
         </section>

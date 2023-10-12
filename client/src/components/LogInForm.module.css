@@ -1,13 +1,14 @@
-.formSection {
+.loginForm__section {
     margin: 0 auto;
 }
 
-form {
+.loginForm__form {
     text-align: center;
     margin: 0.5rem;
 }
 
-input {
+.loginForm__inputUsername,
+.loginForm__inputPassword {
     display: block;  
     margin: 1rem auto 0; 
     width: 90vw;  
@@ -19,12 +20,13 @@ input {
     color: white;
 }
 
-input::placeholder {
+.loginForm__inputUsername::placeholder,
+.loginForm__inputPassword::placeholder {
     color: gray; 
     opacity: 1; 
 }
 
-h6 {
+.loginForm__forgotPassword {
     width: 90vw;
     text-align: end;
     display: inline-block;
@@ -32,22 +34,24 @@ h6 {
     margin-bottom: 1rem;
 }
 
-a {
+.loginForm__forgotPasswordAnchor {
     text-decoration: none;
     color: white; 
 }
 
-a:visited {
+.loginForm__forgotPasswordAnchor:visited {
     color: white; 
 }
 
-.buttonDiv h6 {
+.loginForm__buttonDiv .loginForm__orText {
     text-align: center;
     display: inline-block;
     margin-bottom: 0;
+    font-weight: 400;
 }
 
-button {
+.loginForm__loginButton,
+.loginForm__signupButton {
     background-color: #B87333; 
     border: none; 
     color: white;
@@ -62,6 +66,40 @@ button {
     width: 90vw;
 }
 
-button:hover {
+.loginForm__loginButton:hover,
+.loginForm__signupButton:hover {
     background-color: #D29C6F; 
+}
+
+@media (min-width: 450px) {
+    .loginForm__inputUsername,
+    .loginForm__inputPassword,
+    .loginForm__forgotPassword,
+    .loginForm__loginButton,
+    .loginForm__signupButton,
+    .loginForm__buttonDiv .loginForm__orText {
+        width: 55vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .loginForm__inputUsername,
+    .loginForm__inputPassword,
+    .loginForm__forgotPassword,
+    .loginForm__loginButton,
+    .loginForm__signupButton,
+    .loginForm__buttonDiv .loginForm__orText {
+        width: 35vw;
+    }
+}
+
+@media (min-width: 1920px) {
+    .loginForm__inputUsername,
+    .loginForm__inputPassword,
+    .loginForm__forgotPassword,
+    .loginForm__loginButton,
+    .loginForm__signupButton,
+    .loginForm__buttonDiv .loginForm__orText {
+        width: 20vw;
+    }
 }

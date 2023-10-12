@@ -35,16 +35,59 @@ const SignUpForm = ({ switchToLogin }) => {
     };
 
     return (
-        <section className={styles.formSection}>
-            <form onSubmit={handleFormSubmit}>   
-                <input type="text" id="username" name="userName" placeholder="Username" required onChange={handleInputChange} />
-                <input type="email" id="email" name="email" placeholder="Email" required onChange={handleInputChange} />
-                <input type="password" id="password" name="password" placeholder="Password" required onChange={handleInputChange} />
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required onChange={handleInputChange} />
-                <div className={styles.buttonDiv}>
-                    <button type="submit">Sign Up</button>
-                    <h6>or</h6>
-                    <button type="button" onClick={switchToLogin}>Log In</button>
+        <section className={styles.signUpForm__section}>
+            <form onSubmit={handleFormSubmit} className={styles.signUpForm__form}>   
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="userName" 
+                    placeholder="Username" 
+                    required 
+                    onChange={handleInputChange} 
+                    className={styles.signUpForm__inputUsername}
+                />
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Email" 
+                    required 
+                    onChange={handleInputChange} 
+                    className={styles.signUpForm__inputEmail}
+                />
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Password" 
+                    required 
+                    onChange={handleInputChange} 
+                    className={styles.signUpForm__inputPassword}
+                />
+                <input 
+                    type="password" 
+                    id="confirmPassword" 
+                    name="confirmPassword" 
+                    placeholder="Confirm Password" 
+                    required 
+                    onChange={handleInputChange} 
+                    className={styles.signUpForm__inputPasswordConfirm}
+                />
+                <div className={styles.signUpForm__buttonDiv}>
+                    <button 
+                        type="submit" 
+                        className={styles.signUpForm__signUpButton}
+                    >
+                        Sign Up
+                    </button>
+                    <h6 className={styles.signUpForm__orText}>or</h6>
+                    <button 
+                        type="button" 
+                        onClick={switchToLogin} 
+                        className={styles.signUpForm__loginButton}
+                    >
+                        Log In
+                    </button>
                 </div>
             </form>
         </section>

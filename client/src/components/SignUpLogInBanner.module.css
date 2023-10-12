@@ -1,10 +1,20 @@
-.banner {
+.signUpLogInBanner__section {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-img {
+.signUpLogInBanner__imageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.signUpLogInBanner__coinImage {
     max-width: 40vw;
-    margin: 0 auto;
+}
+
+@media (min-width: 450px) {
+    .signUpLogInBanner__coinImage {
+        width: 150px;
+    }
 }

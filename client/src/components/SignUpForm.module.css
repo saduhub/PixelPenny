@@ -1,13 +1,17 @@
-.formSection {
+.signUpForm__section {
     margin: 0 auto;
 }
 
-form {
+.signUpForm__form {
     text-align: center;
     margin: 0.5rem;
 }
 
-input {
+/* For all inputs */
+.signUpForm__inputUsername,
+.signUpForm__inputEmail,
+.signUpForm__inputPassword,
+.signUpForm__inputPasswordConfirm {
     display: block;  
     margin: 1rem auto 0; 
     width: 90vw;  
@@ -19,25 +23,20 @@ input {
     color: white;
 }
 
-input::placeholder {
+/* For placeholders in all inputs */
+.signUpForm__inputUsername::placeholder,
+.signUpForm__inputEmail::placeholder,
+.signUpForm__inputPassword::placeholder,
+.signUpForm__inputPasswordConfirm::placeholder {
     color: gray; 
     opacity: 1; 
 }
 
-a {
-    text-decoration: none;
-    color: white; 
-}
-
-a:visited {
-    color: white; 
-}
-
-.buttonDiv {
+.signUpForm__buttonDiv {
     margin-top: 2rem;
 }
 
-.buttonDiv h6 {
+.signUpForm__orText {
     width: 90vw;
     text-align: center;
     display: inline-block;
@@ -45,7 +44,8 @@ a:visited {
     font-weight: 400;
 }
 
-button {
+.signUpForm__signUpButton, /* Updated from submitButton to signUpButton */
+.signUpForm__loginButton {
     background-color: #B87333; 
     border: none; 
     color: white;
@@ -60,6 +60,45 @@ button {
     width: 90vw;
 }
 
-button:hover {
+.signUpForm__signUpButton:hover, /* Updated hover effect */
+.signUpForm__loginButton:hover {
     background-color: #D29C6F; 
+}
+
+/* Media Queries */
+
+@media (min-width: 450px) {
+    .signUpForm__inputUsername,
+    .signUpForm__inputEmail,
+    .signUpForm__inputPassword,
+    .signUpForm__inputPasswordConfirm,
+    .signUpForm__orText,
+    .signUpForm__signUpButton,
+    .signUpForm__loginButton {
+        width: 55vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .signUpForm__inputUsername,
+    .signUpForm__inputEmail,
+    .signUpForm__inputPassword,
+    .signUpForm__inputPasswordConfirm,
+    .signUpForm__orText,
+    .signUpForm__signUpButton,
+    .signUpForm__loginButton {
+        width: 35vw;
+    }
+}
+
+@media (min-width: 1920px) {
+    .signUpForm__inputUsername,
+    .signUpForm__inputEmail,
+    .signUpForm__inputPassword,
+    .signUpForm__inputPasswordConfirm,
+    .signUpForm__orText,
+    .signUpForm__signUpButton,
+    .signUpForm__loginButton {
+        width: 20vw;
+    }
 }
