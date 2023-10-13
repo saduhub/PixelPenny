@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './DashboardPage.module.css'
+import coin from '../assets/images/cent.svg'
 
 const DashboardPage = ({ toggleNavbar }) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 450);
@@ -17,7 +18,19 @@ const DashboardPage = ({ toggleNavbar }) => {
     return (
         <div className={styles.landingPageUnAuth}>
             {isMobile && <button onClick={toggleNavbar} className={styles.buttonStyle}>=</button>}
-            <img src="../assets/images/cent.svg" alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
+            <img src={coin} alt="svg of a cent" />
         </div>
     );
 };
