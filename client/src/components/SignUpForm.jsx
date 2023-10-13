@@ -2,8 +2,8 @@ import styles from './SignUpForm.module.css';
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
-import Auth from "../auth";
-import { SIGN_UP } from "../mutations";
+import Auth from "../utils/auth";
+import { SIGN_UP } from "../utils/mutations";
 
 const SignUpForm = ({ switchToLogin }) => {
     const [formState, setFormState] = useState({

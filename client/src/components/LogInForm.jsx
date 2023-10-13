@@ -2,8 +2,8 @@ import styles from './LogInForm.module.css';
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
-import Auth from "../auth";
-import { LOG_IN } from "../mutations";
+import Auth from "../utils/auth";
+import { LOG_IN } from "../utils/mutations";
 
 const LoginForm = ({ switchToSignUp, switchToForgot }) => {
     const [formState, setFormState] = useState({

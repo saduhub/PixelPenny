@@ -3,8 +3,8 @@ import SignUpLogInBanner from "../components/SignUpLogInBanner";
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
-import Auth from "../auth";
-import { RESET_PASSWORD } from "../mutations";
+import Auth from "../utils/auth";
+import { RESET_PASSWORD } from "../utils/mutations";
 
 const ResetPasswordPage = () => {
     const [formState, setFormState] = useState({

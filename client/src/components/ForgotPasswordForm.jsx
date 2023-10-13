@@ -2,7 +2,7 @@ import styles from './ForgotPasswordForm.module.css';
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
-import { SEND_RESET_PASSWORD_EMAIL } from "../mutations";
+import { SEND_RESET_PASSWORD_EMAIL } from "../utils/mutations";
 
 const ForgotPasswordForm = ({ switchToLogin }) => {
     const [formState, setFormState] = useState({
