@@ -4,6 +4,10 @@ class AuthService {
     localStorage.setItem('id_token', idToken);
     window.location.assign('/dashboard');
   }
+  
+  getToken() {
+    return localStorage.getItem('id_token');
+  }
 }
 
 export default new AuthService();
