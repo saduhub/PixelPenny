@@ -20,13 +20,6 @@ const resolvers = {
                 throw new ApolloError(`Error fetching user: ${error.message}.`);
             }
         },
-        resetPasswordRequest: async (_, { email }) => {
-            try {
-                return await User.findOne({ email });
-            } catch (error) {
-                throw new ApolloError(`Error fetching user by email: ${error.message}.`);
-            }
-        },
     },
     Mutation: {
         signUp: async (_, { userName, email, password }) => {
