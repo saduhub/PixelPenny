@@ -6,7 +6,13 @@ const resolvers = {
     Query: {
         getUserById: async (_, { _id }) => {
             try {
-                return await User.findOne({ _id });
+                const user = await User.findOne({ _id });
+
+                if (!user) {
+                    throw new ApolloError(`No user found by id.`);
+                }
+
+                return user; 
             } catch (error) {
                 throw new ApolloError(`Error fetching user by id: ${error.message}.`);
             }
@@ -49,7 +55,7 @@ const resolvers = {
                 return { token, foundUser };
                 
             } catch (error) {
-                throw new ApolloError(`Error during login: ${error.message}.`);
+                throw new ApolloError(`Cannot process request at this time.`);
             }
         },
         sendResetPasswordEmail: async (_, { email }) => {

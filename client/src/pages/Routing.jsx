@@ -7,6 +7,7 @@ import DashboardPage from './DashboardPage';
 import ResetPasswordPage from './ResetPasswordPage';
 import useIsMobile from '../hooks/isMobile'
 import useScrollDirection from '../hooks/scrollDirection';
+import Auth from '../utils/auth'
 
 
 const pagesWithNavbar = ["/dashboard"];
@@ -36,7 +37,7 @@ function Routing() {
         <Navbar onClose={() => setNavbarVisible(false)} navbarVisible={navbarVisible} />
         <Routes>
           <Route path="/" element={<SignUpPage />} />
-          <Route path="/dashboard" element={<DashboardPage toggleNavbar={toggleNavbar}/>} />
+          <Route path="/dashboard" element={ Auth.isAuthenticated && <DashboardPage toggleNavbar={toggleNavbar}/>} />
           <Route path="/resetPassword" element={<ResetPasswordPage />} />
         </Routes>
       </>
