@@ -1,10 +1,10 @@
-// eslint-disable-next-line
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink, } from '@apollo/client';
 import { setContext } from "@apollo/client/link/context";
-// eslint-disable-next-line
-import Routing from './pages/Routing.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignUpPage from './pages/SignUpPage';
+import DashboardPage from './pages/DashboardPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
+import Navbar from "./components/Navbar";
 
 
 const httpLink = createHttpLink({
@@ -29,9 +29,14 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <BrowserRouter>
-        <Routing />
-      </BrowserRouter>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<SignUpPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/resetPassword" element={<ResetPasswordPage />} />
+        </Routes>
+      </Router>
     </ApolloProvider>
   );
 }
