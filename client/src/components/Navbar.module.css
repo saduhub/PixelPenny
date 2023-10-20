@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .navbar__toggleButton{
@@ -30,9 +30,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1600px;
+    justify-content: space-around;
+    /* margin: 0 auto; */
+    /* max-width: 1600px; */
 }
 
 .navbar__imageDiv {
@@ -79,9 +79,15 @@
 } */
 
 @media (min-width: 450px) {
+    .navbar__navbarContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
     .navbar__ul {
         flex-direction: row;
         justify-content: space-around;
+        margin: 0;
     }
 
     .navbar__li {
